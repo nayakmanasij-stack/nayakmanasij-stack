@@ -1,27 +1,33 @@
-<picture>
-  <img src="./assets/banner.svg" alt="Manasij Nayak. Web apps and interactive simulations." width="960">
-</picture>
+<img src="./assets/banner.svg" alt="Manasij Nayak. Web apps and interactive simulations." width="960">
 
-### Hi, I’m Manasij.
+I’m Manasij. I build web apps for campus life and interactive demos that let you see how algorithms work.
 
-I build web apps and interactive demos. My public work includes a marketplace for SRM students and experiments that make technical ideas easier to explore.
+[Explore my repositories ↗](https://github.com/nayakmanasij-stack?tab=repositories)
 
-### Selected work
+## Featured projects
 
-| Project | What it does | Links |
-| --- | --- | --- |
-| **CampusKArt** | Campus marketplace for SRM students | [Source](https://github.com/nayakmanasij-stack/CampusKArt) · [Live demo](https://campus-k-art.vercel.app) |
-| **SRM Market** | Another take on a marketplace for the SRM campus | [Source](https://github.com/nayakmanasij-stack/srm-market) |
+<a href="https://campus-k-art.vercel.app"><img src="./assets/campuskart.svg" alt="CampusKArt — campus marketplace for SRM students" width="960"></a>
 
-### Tech stack
+**CampusKArt** gives SRM students a dedicated place to buy and sell on campus. [Try the live demo ↗](https://campus-k-art.vercel.app) · [View source](https://github.com/nayakmanasij-stack/CampusKArt)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-22273a?style=flat-square&logo=javascript&logoColor=f7df1e)
-![TypeScript](https://img.shields.io/badge/TypeScript-22273a?style=flat-square&logo=typescript&logoColor=77b5fe)
-![HTML](https://img.shields.io/badge/HTML-22273a?style=flat-square&logo=html5&logoColor=ff805c)
-![Git](https://img.shields.io/badge/Git-22273a?style=flat-square&logo=git&logoColor=ff805c)
+<a href="https://github.com/nayakmanasij-stack/srm-market"><img src="./assets/srm-market.svg" alt="SRM Market — marketplace with a React client and an Express API" width="960"></a>
 
-### GitHub activity
+**SRM Market** explores the same idea with a React client, an Express API, and MongoDB. [View source](https://github.com/nayakmanasij-stack/srm-market)
+
+## Wednesday builds
+
+**Next up · Route Lab** — edit a grid and watch A*, Dijkstra, and breadth-first search find their way through. On the same map, a route can take fewer steps and still cost more.
+
+New projects built with Codex are scheduled for Wednesdays at 11 PM IST.
+
+## Tech stack
+
+![JavaScript](https://img.shields.io/badge/JavaScript-181e30?style=flat-square&logo=javascript&logoColor=f7df1e)
+![TypeScript](https://img.shields.io/badge/TypeScript-181e30?style=flat-square&logo=typescript&logoColor=77b5fe)
+![React](https://img.shields.io/badge/React-181e30?style=flat-square&logo=react&logoColor=61dafb)
+![Express](https://img.shields.io/badge/Express-181e30?style=flat-square&logo=express&logoColor=ffffff)
+![MongoDB](https://img.shields.io/badge/MongoDB-181e30?style=flat-square&logo=mongodb&logoColor=78edbc)
+
+## GitHub activity
 
 [![GitHub contribution activity over the past year](./assets/activity.svg)](https://github.com/nayakmanasij-stack#year-list)
-
-[All repositories](https://github.com/nayakmanasij-stack?tab=repositories)

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="180" viewBox="0 0 960 180" role="img" aria-labelledby="title">
+  <title id="title">CampusKArt — Buy &amp; sell on campus</title>
+  <defs>
+    <pattern id="mint" width="17" height="17" patternUnits="userSpaceOnUse"><path d="M17 0H0V17" fill="none" stroke="#8ef1c4" stroke-opacity=".14"/></pattern>
+  </defs>
+  <rect x="1" y="1" width="958" height="178" rx="18" fill="#142725" stroke="#386057" stroke-width="2"/>
+  <rect x="654" y="14" width="224" height="153" rx="12" fill="url(#mint)"/>
+  <text x="44" y="90" font-family="system-ui, sans-serif" font-size="43" font-weight="750" letter-spacing="-1" fill="#fff9ef">CampusKArt</text>
+  <text x="46" y="128" font-family="'Courier New', monospace" font-size="23" font-weight="700" fill="#8ef1c4">Buy &amp; sell on campus</text>
+  <path d="M889 61h26v26m0-26-27 27" fill="none" stroke="#8ef1c4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M707 75h120l-9 66H717z" fill="#223e35" stroke="#8ef1c4" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M731 75V63a36 36 0 0 1 72 0v12" fill="none" stroke="#8ef1c4" stroke-width="3"/>
+  <path d="M736 105h60m-51 13h42" stroke="#8ef1c4" stroke-opacity=".62" stroke-width="3" stroke-linecap="round"/>
+  <path d="M824 49h21m-10-10v20m-148 64h16m-8-8v16" stroke="#8ef1c4" stroke-opacity=".74" stroke-width="2"/>
+</svg>
