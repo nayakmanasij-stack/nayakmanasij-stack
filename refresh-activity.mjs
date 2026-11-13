@@ -41,4 +41,4 @@ const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="246" vi
   '<g fill="#c7d2f0" font-family="system-ui,sans-serif" font-size="13">' + labels.join("") +
   '<text x="28" y="222">GitHub · Updated ' + last + '</text><text x="751" y="222">Less</text><text x="879" y="222">More</text></g>' +
   cells.join("") + scale + '</svg>\n';
-writeFileSync(new URL("./assets/activity.svg", import.meta.url), svg);
+writeFileSync(new URL("./assets/contribution-calendar.svg", import.meta.url), svg);

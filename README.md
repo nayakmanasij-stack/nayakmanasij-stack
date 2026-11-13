@@ -1,4 +1,4 @@
-<img src="./assets/banner.svg" alt="Manasij Nayak. Web apps and interactive simulations." width="960">
+<img src="./assets/retro-banner.svg" alt="Manasij Nayak. Web apps and interactive simulations." width="960">
 
 I’m Manasij. I build web apps for campus life and interactive demos that let you see how algorithms work.
 
@@ -30,4 +30,4 @@ New projects built with Codex are scheduled for Wednesdays at 11 PM IST.
 
 ## GitHub activity
 
-[![GitHub contribution activity over the past year](./assets/activity.svg)](https://github.com/nayakmanasij-stack#year-list)
+[![GitHub contribution activity over the past year](./assets/contribution-calendar.svg)](https://github.com/nayakmanasij-stack#year-list)
