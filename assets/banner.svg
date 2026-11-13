@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="272" viewBox="0 0 960 272" role="img" aria-labelledby="title">
+  <title id="title">Manasij Nayak — Web apps and interactive simulations</title>
+  <defs>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#cdd2ff" stroke-opacity=".09"/></pattern>
+    <linearGradient id="bg"><stop stop-color="#101024"/><stop offset="1" stop-color="#1f2440"/></linearGradient>
+  </defs>
+  <rect width="960" height="272" rx="15" fill="url(#bg)"/>
+  <rect x="1" y="1" width="958" height="270" rx="14" fill="none" stroke="#393d60"/>
+  <rect x="565" y="21" width="367" height="226" fill="url(#grid)"/>
+  <path d="M550 232h106v-38h44v-65h66v-44h73V45h92M592 263v-14h104v-23h92v-57h88v-42h55" fill="none" stroke="#6c67a9" stroke-width="2"/>
+  <path d="M660 108h45V67h49V43h68M751 210h61v-61h27v-37h69" fill="none" stroke="#78f7ca" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M871 57h18v18h-18zM596 206h13v13h-13zM901 173h16v16h-16z" fill="#9e8bfd"/>
+  <path d="M651 100h15v15h-15zM902 106h12v12h-12zM744 204h12v12h-12z" fill="#78f7ca"/>
+  <path d="M47 70h9v9h-9zM59 70h9v9h-9zM71 70h9v9h-9z" fill="#78f7ca"/>
+  <text x="46" y="145" font-family="'Courier New', monospace" font-weight="700" font-size="57" letter-spacing="-2" fill="#f6f4ff">Manasij Nayak</text>
+  <text x="48" y="184" font-family="'Courier New', monospace" font-size="20" fill="#bfc3eb">Web apps &amp; interactive simulations</text>
+</svg>
