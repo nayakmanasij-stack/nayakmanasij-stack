@@ -28,9 +28,7 @@ I’m Manasij. I build web apps for campus life and interactive demos that let y
   <img src="./assets/route-lab-preview.svg" alt="Route Lab preview. The minimum-cost route takes 23 steps and costs 23. The fewest-step route takes 19 steps and costs 67." width="960">
 </picture>
 
-**Next up · Route Lab** compares A*, Dijkstra, and breadth-first search on maps you can edit. Add a wall or patch of rough terrain and see how each algorithm responds.
-
-New builds with Codex are scheduled for Wednesdays at 11 PM IST.
+**Route Lab** is an interactive pathfinding experiment. Edit a map and compare how A*, Dijkstra, and breadth-first search trade off fewer steps against lower terrain cost.
 
 ## `~/toolbox`
 
