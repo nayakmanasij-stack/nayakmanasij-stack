@@ -5,7 +5,7 @@
   <img src="./assets/terminal-header.svg" alt="Manasij Nayak. Web apps, algorithms, and interactive demos." width="960">
 </p>
 <p align="center">
-  <a href="#selected-projects">Projects</a> · <a href="#from-the-lab">From the lab</a> · <a href="#contributions">Contributions</a>
+  <a href="#user-content-selected-projects">Projects</a> · <a href="#user-content-from-the-lab">From the lab</a> · <a href="#user-content-contributions">Contributions</a>
 </p>
 
 ## `~/whoami`
