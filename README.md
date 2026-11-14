@@ -10,7 +10,9 @@
 
 ## `~/whoami`
 
-I’m Manasij. I build web apps for campus life and interactive demos that let you see how algorithms work.
+Hey, I’m Manasij. I’m exploring full-stack development by building projects from the interface down to the API and database. I’ve worked on campus marketplaces with React, Express, and MongoDB, and I’m curious about how the choices behind the scenes shape what people experience on screen.
+
+I also build interactive demos to work through computer science concepts. Route Lab started with a simple question: when is the shortest route more expensive than a detour?
 
 ## Selected projects
 
