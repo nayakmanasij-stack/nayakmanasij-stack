@@ -8,11 +8,11 @@
   <a href="#user-content-selected-projects">Projects</a> · <a href="#user-content-from-the-lab">From the lab</a> · <a href="#user-content-contributions">Contributions</a>
 </p>
 
-## `~/whoami`
+## About
 
-Hey, I’m Manasij. I’m exploring full-stack development by building projects from the interface down to the API and database. I’ve worked on campus marketplaces with React, Express, and MongoDB, and I’m curious about how the choices behind the scenes shape what people experience on screen.
+I'm Manasij Nayak. I build full-stack web applications and explore how user interfaces, APIs, and databases work together. My projects include campus marketplaces for SRM students, with work across React frontends, Express APIs, and MongoDB.
 
-I also build interactive demos to work through computer science concepts. Route Lab started with a simple question: when is the shortest route more expensive than a detour?
+I also build interactive demos to explore computer science concepts. Route Lab compares pathfinding algorithms and shows how terrain cost can change the best route.
 
 ## Selected projects
 
