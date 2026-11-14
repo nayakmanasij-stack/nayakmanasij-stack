@@ -3,6 +3,7 @@ import { writeFileSync } from "node:fs";
 const owner = "nayakmanasij-stack";
 const response = await fetch("https://github.com/users/" + owner + "/contributions");
 if (!response.ok) throw new Error("GitHub returned HTTP " + response.status);
+
 const html = await response.text();
 const days = [...html.matchAll(/<td\b[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*data-level="([0-4])"[^>]*>/g)]
   .map(([, date, level]) => ({ date, level: Number(level) }))
@@ -10,35 +11,54 @@ const days = [...html.matchAll(/<td\b[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*da
 const total = html.match(/([\d,]+)\s+contributions?\s+in\s+the\s+last\s+year/i)?.[1];
 if (days.length < 350 || !total) throw new Error("GitHub did not return the full contribution calendar");
 
-const palette = ["#272e46", "#2b5d50", "#398b73", "#58c99f", "#9af6cc"];
-const activeDays = days.filter(({ level }) => level > 0).length;
 const last = days.at(-1).date;
-const dates = new Map(days.map(({ date, level }) => [date, level]));
 const end = new Date(last + "T00:00:00Z");
 const start = new Date(end);
 start.setUTCDate(end.getUTCDate() - end.getUTCDay() - 52 * 7);
-const cells = [];
-const labels = [];
-for (let index = 0; index < 371; index++) {
-  const date = new Date(start.getTime() + index * 86_400_000);
-  const day = date.toISOString().slice(0, 10);
-  const column = Math.floor(index / 7);
-  const x = 29 + column * 17;
-  if (index % 7 === 0 && (date.getUTCDate() <= 7 || index === 0) && column < 51) {
-    labels.push('<text x="' + x + '" y="61">' + date.toLocaleString("en", {month:"short", timeZone:"UTC"}) + '</text>');
-  }
-  if (!dates.has(day)) continue;
-  const y = 71 + (index % 7) * 15;
-  cells.push('<rect x="' + x + '" y="' + y + '" width="13" height="11" rx="2" fill="' + palette[dates.get(day)] + '"/>');
+const activeDays = days.filter(({ level }) => level > 0).length;
+const columnColors = ["#263a39", "#3d8568", "#58af82", "#7cdca0", "#aeffc5"];
+
+function polygon(points, fill) {
+  return '<polygon points="' + points.map(point => point.join(",")).join(" ") + '" fill="' + fill + '"/>';
 }
-const scale = palette.map((color, index) => '<rect x="' + (790 + index * 17) + '" y="212" width="13" height="11" rx="2" fill="' + color + '"/>').join("");
-const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="246" viewBox="0 0 960 246" role="img" aria-labelledby="title">' +
-  '<title id="title">' + total + ' GitHub contributions across ' + activeDays + ' active days in the past year, through ' + last + '</title>' +
-  '<rect x="1" y="1" width="958" height="244" rx="18" fill="#181e30" stroke="#44506b" stroke-width="2"/>' +
-  '<text x="28" y="38" fill="#fff9ef" font-family="system-ui,sans-serif" font-size="23" font-weight="700">' + total + ' contributions in the past year</text>' +
-  '<text x="929" y="38" text-anchor="end" fill="#9af6cc" font-family="system-ui,sans-serif" font-size="19" font-weight="650">' + activeDays + ' active days</text>' +
-  '<path d="M28 193h904" stroke="#44506b"/>' +
-  '<g fill="#c7d2f0" font-family="system-ui,sans-serif" font-size="13">' + labels.join("") +
-  '<text x="28" y="222">GitHub · Updated ' + last + '</text><text x="751" y="222">Less</text><text x="879" y="222">More</text></g>' +
-  cells.join("") + scale + '</svg>\n';
-writeFileSync(new URL("./assets/contribution-calendar.svg", import.meta.url), svg);
+
+function tile(x, y, level) {
+  const top = y - level * 15;
+  const face = [[x, top], [x + 13, top - 2], [x + 21, top + 7], [x + 8, top + 9]];
+  const topFace = polygon(face, columnColors[level]);
+  if (level === 0) return topFace;
+  return [
+    polygon([face[3], face[2], [x + 21, y + 7], [x + 8, y + 9]], "#2d694f"),
+    polygon([face[1], face[2], [x + 21, y + 7], [x + 13, y - 2]], "#1e473c"),
+    topFace,
+  ].join("");
+}
+
+const tiles = days.map(({ date, level }) => {
+  const index = Math.round((Date.parse(date + "T00:00:00Z") - start.getTime()) / 86_400_000);
+  const week = Math.floor(index / 7);
+  const weekday = index % 7;
+  return { x: 35 + week * 15 + weekday * 9, y: 218 - week * 2 + weekday * 12, level };
+}).sort((a, b) => a.y - b.y);
+
+const svg = [
+  '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="356" viewBox="0 0 960 356" role="img" aria-labelledby="title">',
+  '  <title id="title">' + total + ' GitHub contributions across ' + activeDays + ' active days in the past year</title>',
+  '  <rect x="1" y="1" width="958" height="354" rx="16" fill="#10191d" stroke="#445e56" stroke-width="2"/>',
+  '  <g font-family="system-ui,sans-serif">',
+  '    <text x="28" y="45" fill="#f1fff8" font-size="30" font-weight="700">' + total + ' contributions</text>',
+  '    <text x="28" y="71" fill="#b7cec4" font-size="18">Past year · ' + activeDays + ' active days</text>',
+  '  </g>',
+  '  <g stroke="#172624" stroke-width=".55">',
+  ...tiles.map(({ x, y, level }) => "    " + tile(x, y, level)),
+  '  </g>',
+  '  <path d="M28 308h904" stroke="#445e56"/>',
+  '  <g fill="#b7cec4" font-family="system-ui,sans-serif" font-size="16">',
+  '    <text x="28" y="334">GitHub · Updated ' + last + '</text>',
+  '    <text x="703" y="334">Less</text><text x="891" y="334">More</text>',
+  '  </g>',
+  ...columnColors.map((color, index) => '  <rect x="' + (748 + index * 27) + '" y="321" width="21" height="14" rx="3" fill="' + color + '"/>'),
+  '</svg>',
+].join("\n");
+
+writeFileSync(new URL("./assets/contribution-city.svg", import.meta.url), svg + "\n");
