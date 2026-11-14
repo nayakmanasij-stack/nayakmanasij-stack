@@ -10,7 +10,7 @@
 
 ## About
 
-I'm Manasij Nayak. I build full-stack web applications and explore how user interfaces, APIs, and databases work together. My projects include campus marketplaces for SRM students, with work across React frontends, Express APIs, and MongoDB.
+I'm Manasij Nayak. I build web applications and explore how user interfaces, APIs, and databases work together. CampusKArt is my marketplace for SRM students, built with JavaScript and Supabase. I'm also exploring the React, Express, and MongoDB stack through SRM Market.
 
 I also build interactive demos to explore computer science concepts. Route Lab compares pathfinding algorithms and shows how terrain cost can change the best route.
 
@@ -20,9 +20,9 @@ I also build interactive demos to explore computer science concepts. Route Lab c
 
 **CampusKArt** helps SRM students buy and sell on campus. [Live demo](https://campus-k-art.vercel.app) · [Source code](https://github.com/nayakmanasij-stack/CampusKArt)
 
-<a href="https://github.com/nayakmanasij-stack/srm-market"><img src="./assets/srm-market.svg" alt="SRM Market — marketplace with a React client and an Express API" width="960"></a>
+<a href="https://github.com/nayakmanasij-stack/srm-market"><img src="./assets/srm-market.svg" alt="SRM Market — early full-stack marketplace prototype" width="960"></a>
 
-**SRM Market** pairs a React storefront with an Express API and MongoDB. [Source code](https://github.com/nayakmanasij-stack/srm-market)
+**SRM Market** is an early prototype with a React starter, an Express API, and a MongoDB connection. [Source code](https://github.com/nayakmanasij-stack/srm-market)
 
 ## From the lab
 
