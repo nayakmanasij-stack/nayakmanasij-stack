@@ -22,7 +22,7 @@ I also build interactive demos to explore computer science concepts. Route Lab c
 
 <a href="https://github.com/nayakmanasij-stack/srm-market"><img src="./assets/srm-market.svg" alt="SRM Market — early full-stack marketplace prototype" width="960"></a>
 
-**SRM Market** is an early prototype with a React starter, an Express API, and a MongoDB connection. [Source code](https://github.com/nayakmanasij-stack/srm-market)
+**SRM Market** is a full-stack prototype for publishing and browsing campus listings. It uses React for the interface, Express to validate submissions, and MongoDB to store them. [Source code](https://github.com/nayakmanasij-stack/srm-market)
 
 ## From the lab
 
