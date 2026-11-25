@@ -12,7 +12,7 @@
 
 I'm Manasij Nayak. I build web applications and explore how user interfaces, APIs, and databases work together. CampusKArt is my marketplace for SRM students, built with JavaScript and Supabase. I'm also exploring the React, Express, and MongoDB stack through SRM Market.
 
-I also build interactive demos to explore computer science concepts. Route Lab compares pathfinding algorithms and shows how terrain cost can change the best route.
+I also build interactive demos to explore computer science concepts. Route Lab compares pathfinding algorithms and shows how terrain cost can change the best route. My weekly lab projects are built with Codex.
 
 ## Selected projects
 
@@ -30,7 +30,7 @@ I also build interactive demos to explore computer science concepts. Route Lab c
   <img src="./assets/route-lab-preview.svg" alt="Route Lab preview. The minimum-cost route takes 23 steps and costs 23. The fewest-step route takes 19 steps and costs 67." width="960">
 </picture>
 
-**Route Lab** is an interactive pathfinding experiment. Edit a map and compare how A*, Dijkstra, and breadth-first search trade off fewer steps against lower terrain cost.
+**Route Lab** is an interactive pathfinding experiment built with Codex. Edit a weighted map and compare how A*, Dijkstra, and breadth-first search trade off fewer steps against lower terrain cost. [Live demo](https://nayakmanasij-stack.github.io/route-lab/) · [Source code](https://github.com/nayakmanasij-stack/route-lab)
 
 ## `~/toolbox`
 
